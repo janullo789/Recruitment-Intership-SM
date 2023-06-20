@@ -5,7 +5,7 @@ import com.example.todolistspringbootintership.repositories.ItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.Optional;
 
 @Service
@@ -24,9 +24,9 @@ public class ItemService
 
     public Item save(Item item) {
         if (item.getId() == null) {
-            item.setTimeOfCreated(Instant.now());
+            item.setTimeOfCreated(LocalDateTime.now());
         }
-        item.setTimeOfUpdated(Instant.now());
+        item.setTimeOfUpdated(LocalDateTime.now());
         return itemRepository.save(item);
     }
 

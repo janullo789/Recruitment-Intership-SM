@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
-import java.time.Instant;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -14,13 +14,14 @@ import java.time.Instant;
 public class Item implements Serializable
 {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "item_sequence")
+    @SequenceGenerator(name = "item_sequence", sequenceName = "ITEM_SEQUENCE")
     private Long id;
 
     private String description;
     private Boolean isReady;
-    private Instant timeOfCreated;
-    private Instant timeOfUpdated;
+    private LocalDateTime timeOfCreated;
+    private LocalDateTime timeOfUpdated;
 
     @Override
     public String toString() {

@@ -15,16 +15,24 @@
     <table class="table table-bordered table-striped">
         <thead>
         <tr>
-            <th>Actions</th>
             <th>Id</th>
             <th>Description</th>
             <th>Is ready</th>
             <th>Created At</th>
             <th>Updated At</th>
+            <th>Actions</th>
         </tr>
         </thead>
         <tbody>
         <tr th:each="item : ${items}">
+            <td th:text="${item.id}"></td>
+            <td th:text="${item.description}"></td>
+            <td>
+                <span th:if="${item.isReady} == true" th:text="Yes"/>
+                <span th:unless="${item.isReady} == true" th:text="No"/>
+            </td>
+            <td th:text="${#temporals.format(item.timeOfCreated, 'yyyy-MM-dd HH:mm:ss')}"></td>
+            <td th:text="${#temporals.format(item.timeOfUpdated, 'yyyy-MM-dd HH:mm:ss')}"></td>
             <td>
                 <div class="btn btn-group-sm" role="group">
                     <a class="btn btn-info" th:href="@{/edit/{id}(id=${item.id})}">
@@ -33,15 +41,6 @@
                         <i class="bi bi-trash-fill"></i> Delete</a>
                 </div>
             </td>
-
-            <td th:text="${item.id}"></td>
-            <td th:text="${item.description}"></td>
-            <td>
-                <span th:if="${item.isReady} == true" th:text="Yes"/>
-                <span th:unless="${item.isReady} == true" th:text="No"/>
-            </td>
-            <td th:text="${item.timeOfCreated}"></td>
-            <td th:text="${item.timeOfUpdated}"></td>
         </tr>
         </tbody>
     </table>
