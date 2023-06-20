@@ -11,9 +11,9 @@ Todo list application in Spring Boot
 - counting the number of requests made (displayed in the console)
 
 ## Screenshots
-![image](https://github.com/janullo789/Recruitment-Intership-SM/assets/100961127/1eeb2ae3-5b61-46e3-95b2-5a6509687871)
-![image](https://github.com/janullo789/Recruitment-Intership-SM/assets/100961127/c46456d2-acfa-4013-b074-3ff47bda2cfd)
-![image](https://github.com/janullo789/Recruitment-Intership-SM/assets/100961127/cafd716a-4ff5-4f20-aa8c-2b8883582129)
+![image](https://github.com/janullo789/Recruitment-Intership-SM/assets/100961127/10a7dcd3-ca47-4df1-aeed-ca70bfc3f3f2)
+![image](https://github.com/janullo789/Recruitment-Intership-SM/assets/100961127/e2241af0-577e-43dc-8900-3f0becd0f34a)
+![image](https://github.com/janullo789/Recruitment-Intership-SM/assets/100961127/349dc04b-5d68-4be4-a235-b74673f2d7e9)
 
 
 ## Installation
