@@ -9,31 +9,22 @@
 </head>
 <body>
 <div class="container">
-    <div class="row mt-5">
-        <div class="col-2">
-            <p><a class="btn btn-outline-success" href="/">
-                <i class="bi bi-arrow-left-square-fill"></i> Back</a>
-            </p>
-        </div>
-        <div class="col-6">
-            <h2>Add a new Todo Item</h2>
-            <form action="#" th:action="@{/todo}" th:object="${item}" method="POST">
-                <div class="form-group">
-                    <label for="description">Description</label>
-                    <input class="form-control"
-                           type="text"
-                           th:field="*{description}"
-                           id="description"
-                           placeholder="Description"
-                    >
+    <p><a class="btn btn-outline-success" href="/">Back</a></p>
+    <div class="menu">
+        <h2>Add a new Todo</h2>
+        <form action="#" th:action="@{/todo}" th:object="${item}" method="POST">
+            <div class="form-group">
+                <label for="description">Description</label>
+                <input class="form-control"
+                       type="text"
+                       th:field="*{description}"
+                       id="description"
+                       placeholder="Description"
+                >
 
-                    <button type="submit" class="btn btn-outline-success">
-                        <i class="bi bi-plus-square-fill"></i> Add Todo
-                    </button>
-
-                </div>
-            </form>
-        </div>
+                <button type="submit" class="btn btn-success">Add Todo</button>
+            </div>
+        </form>
     </div>
 </div>
 </body>

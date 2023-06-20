@@ -1,85 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
 .container {
-    margin: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
+    color: #333;
     text-align: center;
 }
 
-table {
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+.sort-menu {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn-secondary {
+    background-color: #ccc;
+    color: #fff;
+    border: none;
+}
+
+.dropdown-menu {
+    margin-left: auto;
+    margin-right: 0;
+    max-width: 100px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 5px 10px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.dropdown-item:hover {
+    background-color: #f5f5f5;
+}
+
+.table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    table-layout: fixed;
 }
 
 th, td {
     padding: 10px;
-    border: 1px solid #ccc;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    word-wrap: break-word;
 }
 
 th {
-    background-color: #f0f0f0;
+    background-color: #f5f5f5;
 }
 
-tr:nth-child(even) {
-    background-color: #f9f9f9;
+.btn-actions {
+    display: flex;
+    justify-content: center;
 }
 
-tr:hover {
-    background-color: #e9e9e9;
+.btn-info {
+    background-color: #007bff;
+    color: #fff;
+    margin-right: 5px;
 }
 
-span {
-    font-weight: bold;
-}
-
-.yes {
-    color: green;
-}
-
-.no {
-    color: red;
+.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
 }
 
 .btnAdd {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #428bca;
+    background-color: #007bff;
     color: #fff;
     text-decoration: none;
     border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
 .btnAdd:hover {
-    background-color: #3071a9;
+    background-color: #0056b3;
 }
 
-.btn-group-sm {
-    display: flex;
-    gap: 10px;
+th:nth-child(1),
+td:nth-child(1) {
+    width: 30px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 8px 12px;
-    background-color: #428bca;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
+th:nth-child(2),
+td:nth-child(2) {
+    width: 400px;
 }
 
-.btn-info {
-    background-color: #5bc0de;
-}
-
-.btn-danger {
-    background-color: #d9534f;
-}
-
-.btn i {
-    margin-right: 5px;
-}
-
-.btn:hover {
-    background-color: #3071a9;
+th:nth-child(3),
+td:nth-child(3) {
+    width: 70px;
 }

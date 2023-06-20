@@ -40,11 +40,11 @@ form {
     align-items: center;
 }
 
-.form-group {
+.row {
     margin-bottom: 10px;
 }
 
-label {
+.label-desc {
     font-weight: bold;
     margin-right: 10px;
 }
@@ -57,12 +57,27 @@ label {
     border: 1px solid #ccc;
 }
 
-.btn-success {
-    background-color: #28a745;
-    color: #fff;
-    border: none;
+.form-check {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
 }
 
-.btn-success:hover {
-    background-color: #218838;
+.form-check-input {
+    margin-right: 5px;
+}
+
+.btn-outline-success {
+    background-color: transparent;
+    color: #28a745;
+    border: 1px solid #28a745;
+}
+
+.btn-outline-success:hover {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.hidden {
+    display: none;
 }

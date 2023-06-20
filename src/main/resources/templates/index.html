@@ -12,7 +12,18 @@
     <h1>TODO LIST</h1>
     <hr/>
 
-    <table class="table table-bordered table-striped">
+
+    <div class="sort-menu">
+        <h2>Sort By</h2>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" th:href="@{/home/id}">ID</a>
+            <a class="dropdown-item" th:href="@{/home/update-at}">Update At</a>
+            <a class="dropdown-item" th:href="@{/home/create-at}">Create At</a>
+        </div>
+    </div>
+
+
+    <table class="table">
         <thead>
         <tr>
             <th>Id</th>
@@ -34,11 +45,9 @@
             <td th:text="${#temporals.format(item.timeOfCreated, 'yyyy-MM-dd HH:mm:ss')}"></td>
             <td th:text="${#temporals.format(item.timeOfUpdated, 'yyyy-MM-dd HH:mm:ss')}"></td>
             <td>
-                <div class="btn btn-group-sm" role="group">
-                    <a class="btn btn-info" th:href="@{/edit/{id}(id=${item.id})}">
-                        <i class="bi bi-pencil-fill"></i> Edit</a>
-                    <a class="btn btn-danger" th:href="@{/delete/{id}(id=${item.id})}">
-                        <i class="bi bi-trash-fill"></i> Delete</a>
+                <div class="btn btn-actions" role="group">
+                    <a class="btn btn-info" th:href="@{/edit/{id}(id=${item.id})}">Edit</a>
+                    <a class="btn btn-danger" th:href="@{/delete/{id}(id=${item.id})}">Delete</a>
                 </div>
             </td>
         </tr>

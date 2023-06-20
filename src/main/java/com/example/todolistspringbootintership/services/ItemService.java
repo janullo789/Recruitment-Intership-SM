@@ -3,6 +3,7 @@ package com.example.todolistspringbootintership.services;
 import com.example.todolistspringbootintership.models.Item;
 import com.example.todolistspringbootintership.repositories.ItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -33,4 +34,18 @@ public class ItemService
     public void delete(Item Item) {
         itemRepository.delete(Item);
     }
+
+    public Iterable<Item> getAllSortedBy(String sortBy) {
+        switch (sortBy) {
+            case "id":
+                return itemRepository.findAll(Sort.by(Sort.Direction.ASC, "id"));
+            case "update-at":
+                return itemRepository.findAll(Sort.by(Sort.Direction.DESC, "timeOfUpdated"));
+            case "create-at":
+                return itemRepository.findAll(Sort.by(Sort.Direction.DESC, "timeOfCreated"));
+            default:
+                throw new IllegalArgumentException("Invalid sorting option: " + sortBy);
+        }
+    }
+
 }
