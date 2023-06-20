@@ -124,3 +124,43 @@ th:nth-child(3),
 td:nth-child(3) {
     width: 70px;
 }
+
+.search-box {
+    margin-bottom: 20px;
+}
+
+.search-box input[type="text"] {
+    padding: 10px;
+    width: 200px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.search-box button {
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-box .btn-danger {
+    text-decoration: none;
+}
+
+.search-box .btn-danger:hover {
+    text-decoration: none;
+    background-color: #aa2935;
+}
+
+.search-box button:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 600px) {
+    .search-box input[type="text"] {
+        width: 100%;
+    }
+}

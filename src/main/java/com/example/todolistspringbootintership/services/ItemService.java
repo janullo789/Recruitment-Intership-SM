@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class ItemService
@@ -46,6 +47,13 @@ public class ItemService
             default:
                 throw new IllegalArgumentException("Invalid sorting option: " + sortBy);
         }
+    }
+
+    public Iterable<Item> searchByIndex(Long searchIndex) {
+        // Przykładowa implementacja wyszukiwania po indeksie
+        return itemRepository.findAll().stream()
+                .filter(item -> item.getId().equals(searchIndex))
+                .collect(Collectors.toList());
     }
 
 }
