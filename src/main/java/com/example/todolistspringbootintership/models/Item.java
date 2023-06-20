@@ -24,7 +24,7 @@ public class Item implements Serializable
 
     @Override
     public String toString() {
-        return String.format("Item{id=%d, description='%s', isReady='%b', timeOfCreated='%s', timeOfUpdated='%s'",
+        return String.format("Item{id=%d, description='%s', isReady='%s', timeOfCreated='%s', timeOfUpdated='%s'",
                 id, description, isReady, timeOfCreated, timeOfUpdated);
     }
 

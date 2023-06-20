@@ -1,0 +1,85 @@
+.container {
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: #f0f0f0;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #e9e9e9;
+}
+
+span {
+    font-weight: bold;
+}
+
+.yes {
+    color: green;
+}
+
+.no {
+    color: red;
+}
+
+.btnAdd {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #428bca;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.btnAdd:hover {
+    background-color: #3071a9;
+}
+
+.btn-group-sm {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #428bca;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.btn-info {
+    background-color: #5bc0de;
+}
+
+.btn-danger {
+    background-color: #d9534f;
+}
+
+.btn i {
+    margin-right: 5px;
+}
+
+.btn:hover {
+    background-color: #3071a9;
+}

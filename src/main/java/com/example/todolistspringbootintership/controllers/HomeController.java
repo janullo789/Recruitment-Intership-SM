@@ -14,8 +14,8 @@ public class HomeController
 
     @GetMapping(value = {"/", "/home"})
     public ModelAndView home() {
-        ModelAndView modelAndView = new ModelAndView("home");
-        modelAndView.addObject("Item", itemService.getAll());
+        ModelAndView modelAndView = new ModelAndView("index");
+        modelAndView.addObject("items", itemService.getAll());
         return modelAndView;
     }
 }

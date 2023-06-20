@@ -22,12 +22,12 @@ public class ItemService
         return itemRepository.findAll();
     }
 
-    public Item save(Item Item) {
-        if (Item.getId() == null) {
-            Item.setTimeOfCreated(Instant.now());
+    public Item save(Item item) {
+        if (item.getId() == null) {
+            item.setTimeOfCreated(Instant.now());
         }
-        Item.setTimeOfUpdated(Instant.now());
-        return itemRepository.save(Item);
+        item.setTimeOfUpdated(Instant.now());
+        return itemRepository.save(item);
     }
 
     public void delete(Item Item) {

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../static/stylesIndex.css" th:href="@{/stylesCreate.css}" rel="stylesheet"/>
+
+</head>
+<body>
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-2">
+            <p><a class="btn btn-outline-success" href="/">
+                <i class="bi bi-arrow-left-square-fill"></i> Back</a>
+            </p>
+        </div>
+        <div class="col-6">
+            <h2>Edit Todo Item</h2>
+            <form class="row g-3" action="#" th:action="@{/todo/{id}(id=${todo.id})}" th:object="${todo}" method="POST">
+                <div class="form-group">
+                    <div class="col-6">
+                        <label for="description">Description</label>
+                        <input class="form-control"
+                               type="text"
+                               th:field="*{description}"
+                               id="description"
+                               placeholder="Description"
+                        >
+                    </div>
+                    <div class="col-6 form-check">
+                        <input class="form-check-input"
+                               type="checkbox"
+                               id="inputIsComplete"
+                               th:field="*{isReady}"
+                               th:checked="${isReady} == true">
+                        <label class="form-check-label" for="inputIsComplete">
+                            Completed?
+                        </label>
+                    </div>
+
+                    <input type="hidden" th:field="*{timeOfCreated}" />
+                    <input type="hidden" th:field="*{timeOfUpdated}" />
+
+                    <button type="submit" class="btn btn-outline-success">
+                        <i class="bi bi-plus-square-fill"></i> Update
+                    </button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
